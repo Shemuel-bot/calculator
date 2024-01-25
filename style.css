@@ -1,0 +1,28 @@
+body{
+    display: flex;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    justify-content: center;
+    align-items: center;
+}
+#calculator-body{
+    width: 425px;
+    height: 525px;
+    margin-top: 150px;
+    border-radius: 8px;
+    background-color: rgb(62, 53, 71);
+}
+#first-row{
+display: flex;
+justify-content: space-around;
+flex: 1;
+width: 420px;
+height: 100px;
+background-color: aliceblue;
+}
+.operand{
+    width: 125px;
+}
+.num-button{
+    width: 125px;
+}
+
