@@ -4,19 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="main.js"></script>
+    <script src="main.js" defer></script>
     <title>Cak ul ator</title>
 </head>
 <body>
     <div id="calculator-body">
         <div id="display">
-            <h1>0</h1>
+            <h1 id="result"></h1>
         </div>
-        <div id="first-row">
+
+        <div class="rows">
+            <button class="num-button">AC</button>
+            <button class="num-button">+/-</button>
+            <button class="num-button">%</button>
+            <button class="operand">/</button>
+        </div>
+
+        <div class="rows">
             <button class="num-button">7</button>
             <button class="num-button">8</button>
             <button class="num-button">9</button>
             <button class="operand">*</button>
+        </div>
+
+        <div class="rows">
+            <button class="num-button">4</button>
+            <button class="num-button">5</button>
+            <button class="num-button">6</button>
+            <button class="operand">-</button>
+        </div>
+
+        <div class="rows">
+            <button class="num-button">1</button>
+            <button class="num-button">2</button>
+            <button class="num-button">3</button>
+            <button class="operand">+</button>
+        </div>
+
+        <div class="rows">
+            <button id="zero">0</button>
+            <button class="operand">.</button>
+            <button id="equal-sign">=</button>
         </div>
     </div>
 </body>

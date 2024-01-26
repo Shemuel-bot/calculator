@@ -1,6 +1,6 @@
 body{
     display: flex;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Courier New', Courier, monospace;
     justify-content: center;
     align-items: center;
 }
@@ -10,19 +10,60 @@ body{
     margin-top: 150px;
     border-radius: 8px;
     background-color: rgb(62, 53, 71);
+    padding: 10px;
 }
-#first-row{
+.rows{
 display: flex;
 justify-content: space-around;
 flex: 1;
+
 width: 420px;
-height: 100px;
-background-color: aliceblue;
+height: 85px;
+gap: 8px;
+}
+#display{
+    display: flex;
+    align-items: center;
+    background-color: rgba(190, 194, 197, 0.918);
+    height: 100px;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    font-size: larger;   
+}
+#zero{
+    font-size: 50px;
+    height: 75px;
+    font-weight: 700;
+    border-style: none;
+    border-radius: 10px;
+    background-color: rgb(90, 76, 221);
+    width: 200px;
+}
+#equal-sign{
+    font-size: larger;
+    font-weight: 700;
+    height: 75px;
+    width: 110px;
+    border-style: none;
+    border-radius: 10px;
+    background-color: rgb(76, 211, 132);
 }
 .operand{
-    width: 125px;
+    font-size: larger;
+    font-weight: 700;
+    height: 75px;
+    width: 110px;
+    border-style: none;
+    border-radius: 10px;
+    background-color: rgb(76, 211, 132);
 }
 .num-button{
-    width: 125px;
+    font-size: 25px;
+    height: 75px;
+    font-weight: 700;
+    border-style: none;
+    border-radius: 10px;
+    background-color: rgb(90, 76, 221);
+    width: 110px;
 }
 
