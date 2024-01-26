@@ -5,6 +5,7 @@ const equalSign = document.querySelector('#equal-sign');
 const zero = document.querySelector('#zero');
 const ac = document.querySelector('#reset');
 const plusMinus = document.querySelector('#plus-minus');
+const period = document.querySelector('#period');
 
 let firstNumOfOperation;
 let secondNumOfOperation;
@@ -18,6 +19,7 @@ Array.from(numbers).map((x) => {x.addEventListener('click', ()=>{
     SetFirstAndSecondOperationNumbers()})});
 Array.from(operands).map((x) => {x.addEventListener('click', ()=>{operandInUse = x.textContent; result.textContent = firstNumOfOperation; useOperand = true})});
 
+period.addEventListener('click', ()=>{result.textContent = result.textContent + '.'; SetFirstAndSecondOperationNumbers()})
 plusMinus.addEventListener('click', ()=>{
     if(negative == false){
         result.textContent = result.textContent.padStart(2,'-');

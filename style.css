@@ -57,6 +57,15 @@ gap: 8px;
     background-color: rgb(90, 76, 221);
     width: 110px;
 }
+#period{
+    font-size: larger;
+    font-weight: 700;
+    height: 75px;
+    width: 110px;
+    border-style: none;
+    border-radius: 10px;
+    background-color: rgb(76, 211, 132);
+}
 #plus-minus{
     font-size: 25px;
     height: 75px;
