@@ -28,7 +28,7 @@ gap: 8px;
     height: 100px;
     border-radius: 4px;
     margin-bottom: 5px;
-    font-size: larger;   
+    font-size: 25px;   
 }
 #zero{
     font-size: 50px;
@@ -48,6 +48,24 @@ gap: 8px;
     border-radius: 10px;
     background-color: rgb(76, 211, 132);
 }
+#reset{
+    font-size: 25px;
+    height: 75px;
+    font-weight: 700;
+    border-style: none;
+    border-radius: 10px;
+    background-color: rgb(90, 76, 221);
+    width: 110px;
+}
+#plus-minus{
+    font-size: 25px;
+    height: 75px;
+    font-weight: 700;
+    border-style: none;
+    border-radius: 10px;
+    background-color: rgb(90, 76, 221);
+    width: 110px;
+}
 .operand{
     font-size: larger;
     font-weight: 700;
@@ -57,6 +75,7 @@ gap: 8px;
     border-radius: 10px;
     background-color: rgb(76, 211, 132);
 }
+
 .num-button{
     font-size: 25px;
     height: 75px;
