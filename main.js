@@ -6,6 +6,7 @@ const zero = document.querySelector('#zero');
 const ac = document.querySelector('#reset');
 const plusMinus = document.querySelector('#plus-minus');
 const period = document.querySelector('#period');
+const percent = document.querySelector('#percent');
 
 let alreadyTyped = false;
 let firstNumOfOperation;
@@ -14,20 +15,22 @@ let useOperand = false;
 let operandInUse;
 let negative = false;
 let pressedEqual=false;
+let usingPercent=false;
 
 Array.from(numbers).map((x) => {x.addEventListener('click', ()=>{
     if(useOperand && !alreadyTyped){result.textContent = ''; alreadyTyped = true;}
     result.textContent += x.textContent;
     })});
-Array.from(operands).map((x) => {x.addEventListener('click', ()=>{operandInUse = x.textContent; 
+Array.from(operands).map((x) => {x.addEventListener('click', ()=>{
+    operandInUse = x.textContent;
     if(pressedEqual==false){SetFirstAndSecondOperationNumbers();}
-    pressedEqual=false;
-    result.textContent = firstNumOfOperation.toFixed(2);
     useOperand = true;
+    result.textContent = firstNumOfOperation.toFixed(2);
+    pressedEqual=false;
+    
     alreadyTyped = false; 
-    negative = false;
-    console.log(firstNumOfOperation)})});
-
+    negative = false;})});
+percent.addEventListener('click',()=> {result.textContent /= 100;})
 period.addEventListener('click', ()=>{if(!result.textContent.includes('.'))result.textContent = result.textContent.padEnd(result.textContent.length+1, '.'); })
 plusMinus.addEventListener('click', ()=>{
     if(negative == false){
@@ -45,6 +48,7 @@ equalSign.addEventListener('click', ()=>{
     secondNumOfOperation = 0;
     negative = false;
     pressedEqual=true;
+    usingPercent=false;
     operandInUse='';
 });
 function SetFirstAndSecondOperationNumbers(){
@@ -52,8 +56,7 @@ function SetFirstAndSecondOperationNumbers(){
         secondNumOfOperation = Number(result.textContent);
         SetOperand();
     }else{
-        firstNumOfOperation = Number(result.textContent)
-        if(operandInUse=='%')firstNumOfOperation/=100;}
+        firstNumOfOperation = Number(result.textContent)}
 }
 function SetOperand(){
     switch (operandInUse) {
