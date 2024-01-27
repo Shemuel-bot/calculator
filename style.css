@@ -30,15 +30,6 @@ gap: 8px;
     margin-bottom: 5px;
     font-size: 25px;   
 }
-#zero{
-    font-size: 50px;
-    height: 75px;
-    font-weight: 700;
-    border-style: none;
-    border-radius: 10px;
-    background-color: rgb(90, 76, 221);
-    width: 200px;
-}
 #equal-sign{
     font-size: larger;
     font-weight: 700;
@@ -74,6 +65,24 @@ gap: 8px;
     border-radius: 10px;
     background-color: rgb(90, 76, 221);
     width: 110px;
+}
+#bottom-row{
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+
+    width: 420px;
+    height: 85px;
+    gap: 8px;
+}
+#bottom-row .num-button{
+    font-size: 50px;
+    height: 75px;
+    font-weight: 700;
+    border-style: none;
+    border-radius: 10px;
+    background-color: rgb(90, 76, 221);
+    width: 200px;
 }
 .operand{
     font-size: larger;

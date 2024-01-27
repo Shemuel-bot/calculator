@@ -28,7 +28,7 @@ Array.from(operands).map((x) => {x.addEventListener('click', ()=>{operandInUse =
     negative = false;
     console.log(firstNumOfOperation)})});
 
-//period.addEventListener('click', ()=>{result.textContent = result.textContent.padEnd(result.textContent.length+1, '.'); })
+period.addEventListener('click', ()=>{if(!result.textContent.includes('.'))result.textContent = result.textContent.padEnd(result.textContent.length+1, '.'); })
 plusMinus.addEventListener('click', ()=>{
     if(negative == false){
          result.textContent *= -1;
@@ -38,15 +38,13 @@ plusMinus.addEventListener('click', ()=>{
          negative = false;
         }
     })
-zero.addEventListener('click', ()=>{result.textContent += 0; SetFirstAndSecondOperationNumbers()});
-ac.addEventListener('click', ()=>{result.textContent = ''; useOperand=false; firstNumOfOperation=0;secondNumOfOperation=0; })
+ac.addEventListener('click', ()=>{result.textContent = ''; useOperand=false; firstNumOfOperation=0;secondNumOfOperation=0; pressedEqual=false;})
 equalSign.addEventListener('click', ()=>{
     SetFirstAndSecondOperationNumbers();
     result.textContent = firstNumOfOperation.toFixed(2);
     secondNumOfOperation = 0;
     negative = false;
     pressedEqual=true;
-    //firstNumOfOperation = 0;
     operandInUse='';
 });
 function SetFirstAndSecondOperationNumbers(){
@@ -54,7 +52,8 @@ function SetFirstAndSecondOperationNumbers(){
         secondNumOfOperation = Number(result.textContent);
         SetOperand();
     }else{
-        firstNumOfOperation = Number(result.textContent)}
+        firstNumOfOperation = Number(result.textContent)
+        if(operandInUse=='%')firstNumOfOperation/=100;}
 }
 function SetOperand(){
     switch (operandInUse) {
