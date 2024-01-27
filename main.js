@@ -35,6 +35,7 @@ period.addEventListener('click', ()=>{if(!result.textContent.includes('.'))resul
 plusMinus.addEventListener('click', ()=>{
     if(negative == false){
          result.textContent *= -1;
+         if(pressedEqual)firstNumOfOperation=Number(result.textContent);
          negative = true;
         }else{
          result.textContent *= -1;
